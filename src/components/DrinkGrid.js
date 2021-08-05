@@ -13,11 +13,11 @@ export const DrinkGrid = ({ category }) => {
 
       {loading && <p>Loading</p>}
 
-      <div className='card-grid'>
+      <section className='card-grid'>
         {drinks.map((drink) => (
           <DrinkGridItem key={drink.drinkID} {...drink} />
         ))}
-      </div>
+      </section>
     </>
   );
 };

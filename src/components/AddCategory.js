@@ -5,6 +5,7 @@ export const AddCategory = ({ setCategoriesFromBebidApp }) => {
   const [inputValue, setInputValue] = useState('');
 
   const handleInputChange = (element) => {
+    console.log(element.target.value);
     setInputValue(element.target.value);
   };
 

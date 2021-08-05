@@ -1,6 +1,7 @@
 import React, { useState } from 'react';
 import { AddCategory } from './components/AddCategory';
 import { DrinkGrid } from './components/DrinkGrid';
+import { AppRouter } from './router/AppRouter';
 
 export const BebidApp = () => {
   /* const categories = ['Ordinary_Drink', 'Cocktail', 'Milk_/_Float_/_Shake', 'Cocoa', 'Shot', 
@@ -9,16 +10,16 @@ export const BebidApp = () => {
      */
 
   const [categories, setCategories] = useState([
-    //'Ordinary_Drink',
+    'Ordinary_Drink',
     'Cocktail',
     /*'Milk_/_Float_/_Shake',
     'Cocoa',
     'Shot',
     'Coffee_/_Tea',
     'Homemade_Liqueur',
-    'Punch_/_Party_Drink',
+    'Punch_/_Party_Drink',  */
     'Beer',
-    'Soft_Drink_/_Soda',
+    /*'Soft_Drink_/_Soda',
     'Other/Unknown',*/
   ]);
 
@@ -32,8 +33,9 @@ export const BebidApp = () => {
 
   return (
     <>
-      <h2>BebidApp</h2>
+      <AppRouter />
 
+      <h2>BebidApp</h2>
       <AddCategory setCategoriesFromBebidApp={setCategories} />
       <hr />
 
