@@ -1,44 +1,42 @@
-import { render } from '@testing-library/react';
-import { act } from 'react-dom/cjs/react-dom-test-utils.development';
+import { shallow } from 'enzyme';
 import { DrinkGridItem } from '../../../components/drinks/DrinkGridItem';
 
-describe('DrinkGridItem', () => {
-  let container = null;
-  test('should ', () => {
-    const obj = {
-      drinkID: '1',
-      drinkName: 'beer',
-      drinkImageURL:
-        'https://www.thecocktaildb.com/images/media/drink/5noda61589575158.jpg',
-    };
+describe('Test in <DrinkGridItem />', () => {
+  const drinkID = '10';
+  const drinkImageURL = 'https://localhost/drink.jpg';
+  const drinkName = 'Titulo de imagen';
+  const wrapper = shallow(
+    <DrinkGridItem
+      drinkID={drinkID}
+      drinkName={drinkName}
+      drinkImageURL={drinkImageURL}
+    />
+  );
 
-    // act(() => {
-    //   render(
-    //     <a
-    //       href={`./drink/${obj.drinkID}`}
-    //       className='card animate__animated animate__fadeIn'
-    //     >
-    //       <img src={obj.drinkImageURL} alt={obj.drinkName} />
-    //       <p>{obj.drinkName}</p>
-    //     </a>,
-    //     container
-    //   );
-    // });
-
-    // expect(DrinkGridItem).toBe(obj);
+  test('Should show the component correctly', () => {
+    expect(wrapper).toMatchSnapshot();
   });
 
-  test('drinks returns', () => {
-    const DrinkGridItem = jest.fn(() => true);
+  test('Should have a paragraph with the image tile', () => {
+    const p = wrapper.find('p');
+    expect(p.text().trim()).toBe(drinkName);
+  });
 
-    DrinkGridItem();
+  test('should have an image with the same url and alt of props', () => {
+    const img = wrapper.find('img');
+    expect(img.prop('src')).toBe(drinkImageURL);
+    expect(img.prop('alt')).toBe(drinkName);
+  });
 
-    expect(DrinkGridItem).toHaveReturned();
+  test('should have animate_fadeIn class', () => {
+    const Link = wrapper.find('Link');
+    const className = Link.prop('className');
+
+    expect(className.includes('animate__fadeIn')).toBe(true);
+  });
+
+  test('should have a link to the drink with the ID', () => {
+    const link = wrapper.find('Link');
+    expect(link.prop('to')).toBe('./drink/' + drinkID);
   });
 });
-
-// global.fetch = jest.fn(() =>
-//   Promise.resolve({
-//     json: () => Promise.resolve({ rates: { CAD: 1.42 } }),
-//   })
-// );

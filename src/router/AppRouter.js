@@ -5,7 +5,6 @@ import {
   Switch,
   Route,
   Redirect,
-  //   Link
 } from 'react-router-dom';
 import { Navbar } from '../components/ui/Navbar';
 

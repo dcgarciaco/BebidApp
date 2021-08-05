@@ -7,13 +7,6 @@ export const useFetchDrinks = (category) => {
     loading: true,
   });
 
-  /* 
-  useEffect(() => {
-    //getDrinks(category).then(drinksBasicInfo => setDrinks(drinksBasicInfo))
-    getDrinks(category).then(setDrinks);
-  }, [category]); // Se ejecuta cuando el componente es renderizado por primera vez
- */
-
   useEffect(() => {
     getDrinks(category).then((drink) => {
       setstate({

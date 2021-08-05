@@ -6,6 +6,7 @@ export const getDrinkInfo = async (drinkId) => {
   if (!drinks) {
     return drinks;
   }
+  
   const drinkInfo = drinks.map((drink) => {
     const notNullIngredientsWithMeasures = (newArray, key) => {
       const value = drink[key];

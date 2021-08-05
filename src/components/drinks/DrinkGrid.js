@@ -1,7 +1,7 @@
 import React from 'react';
 import { useFetchDrinks } from '../../hooks/useFetchDrinks';
-
 import { DrinkGridItem } from './DrinkGridItem';
+import PropTypes from 'prop-types';
 
 export const DrinkGrid = ({ category }) => {
   const { data: drinks, loading } = useFetchDrinks(category);
@@ -17,4 +17,8 @@ export const DrinkGrid = ({ category }) => {
       </section>
     </>
   );
+};
+
+DrinkGrid.propType = {
+  category: PropTypes.string.isRequired,
 };

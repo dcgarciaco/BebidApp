@@ -1,0 +1,12 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test on <DrinkGrid /> should show the component correctly 1`] = `
+<Fragment>
+  <p>
+    Loading
+  </p>
+  <section
+    className="card-grid"
+  />
+</Fragment>
+`;

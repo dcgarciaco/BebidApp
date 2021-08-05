@@ -1,0 +1,41 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in <AppRouter /> should shows correctly 1`] = `
+<BrowserRouter>
+  <header>
+    <Navbar />
+  </header>
+  <main>
+    <Switch>
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/cocktails"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/ordinary_drinks"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/beers"
+      />
+      <Route
+        component={[Function]}
+        exact={true}
+        path="/drink/:drinkID"
+      />
+      <Redirect
+        to="/"
+      />
+    </Switch>
+  </main>
+</BrowserRouter>
+`;

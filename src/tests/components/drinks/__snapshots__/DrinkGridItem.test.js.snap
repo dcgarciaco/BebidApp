@@ -1,0 +1,16 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`Test in <DrinkGridItem /> Should show the component correctly 1`] = `
+<Link
+  className="card animate__animated animate__fadeIn"
+  to="./drink/10"
+>
+  <img
+    alt="Titulo de imagen"
+    src="https://localhost/drink.jpg"
+  />
+  <p>
+    Titulo de imagen
+  </p>
+</Link>
+`;

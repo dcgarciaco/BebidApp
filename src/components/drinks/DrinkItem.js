@@ -6,17 +6,17 @@ import { useFetchDrinkInfo } from '../../hooks/useFetchDrinkInfo';
 
 export const DrinkItem = () => {
   const { drinkID } = useParams();
-  // console.log(drinkID);
+  
 
   const { data: drink, loading } = useFetchDrinkInfo(drinkID);
   if (!drink) {
     return <Redirect to='/' />;
   }
-  console.log('DrinkItem', drink);
-  // console.log('DrinkItem', drink[0].drinkImageURL);
+  
+  
 
   const renderIngredientList = (data) => {
-    //    console.log(data);
+  
     const listIngredients = data.map((ingredient, index) => (
       <li key={index}>
         {' '}

@@ -11,8 +11,5 @@ export const getDrinks = async (category) => {
     };
   });
 
-  //console.log(drinksBasicInfo);
-
-  //setDrinks(drinksBasicInfo);
   return drinksBasicInfo;
 };
