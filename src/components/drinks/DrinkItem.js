@@ -1,5 +1,6 @@
+import './drinkItem.css';
 import React from 'react';
-import { useParams } from 'react-router-dom';
+import { Redirect, useParams } from 'react-router-dom';
 
 import { useFetchDrinkInfo } from '../../hooks/useFetchDrinkInfo';
 
@@ -8,11 +9,18 @@ export const DrinkItem = () => {
   // console.log(drinkID);
 
   const drink = useFetchDrinkInfo(drinkID);
-  console.log('DrinkItem', drink[0]);
+  if (!drink) {
+    return <Redirect to='/' />;
+  }
+  console.log('DrinkItem', drink);
+  console.log('DrinkItem', drink[0].drinkImageURL);
 
   return (
-    <div>
+    <section className='drinkContent'>
+      <div>
+        <img src={drink[0].drinkImageURL} alt='' />
+      </div>
       <h1>Drink</h1>
-    </div>
+    </section>
   );
 };

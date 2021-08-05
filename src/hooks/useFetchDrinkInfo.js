@@ -10,6 +10,5 @@ export const useFetchDrinkInfo = (drinkID) => {
     });
   }, [drinkID]);
 
-  console.log(drinkInfo);
   return drinkInfo;
 };

@@ -17,8 +17,10 @@ import { DrinkItem } from '../components/drinks/DrinkItem';
 export const AppRouter = () => {
   return (
     <Router>
-      <div>
+      <header>
         <Navbar />
+      </header>
+      <article>
         <Switch>
           <Route exact path='/' component={Cocktails} />
           <Route exact path='/cocktails' component={Cocktails} />
@@ -28,7 +30,7 @@ export const AppRouter = () => {
 
           <Redirect to='/' />
         </Switch>
-      </div>
+      </article>
     </Router>
   );
 };
