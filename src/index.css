@@ -1,10 +1,10 @@
-@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@700&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Oswald:wght@400;700&display=swap');
 * {
   font-family: 'Oswald', sans-serif;
 }
 
 body {
-  background-color: #d3b789;
+  background-color: #d8bf97;
   margin: 0;
 }
 
@@ -14,17 +14,32 @@ input {
   width: 100%;
 }
 
+main {
+  padding: 10px 60px;
+}
+h1 {
+  font-size: 35px;
+  color: #002d29;
+}
+
+h2 {
+  font-size: 30px;
+}
 .card-grid {
   display: flex;
   flex-direction: row;
   flex-wrap: wrap;
 }
 
+.card-grid a {
+  text-decoration: none;
+  color: #002d29;
+}
 .card {
   align-content: center;
-  border: 1px solid grey;
-  border-radius: 6px;
-  margin-bottom: 10px;
+  /* border: 1px solid #80410b;
+  border-radius: 6px; */
+  margin: 0 10px 10px;
   overflow: hidden;
   max-width: 175px;
 }
@@ -32,8 +47,10 @@ input {
 .card p {
   padding: 5px;
   text-align: center;
+  margin: 0;
 }
 
 .card img {
-  max-height: 170px;
+  max-width: 170px;
+  border-radius: 6px;
 }

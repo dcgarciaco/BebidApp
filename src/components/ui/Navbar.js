@@ -1,6 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
+import bebidAppLogo from '../../assets/img/logoBebidApp.png';
 
 export const Navbar = () => {
   return (
@@ -9,10 +10,11 @@ export const Navbar = () => {
         exact
         activeClassName='active'
         to='/'
-        className=''
+        className='logo'
         aria-current='page'
       >
-        BebidApp
+        <img src={bebidAppLogo} alt='BebidApp Logo' />
+        <span>BebidApp</span>
       </NavLink>
       <ul>
         <li>

@@ -1,17 +1,30 @@
 .drinkContent {
   display: grid;
-  grid-template-columns: 4fr 8fr;
+  grid-template-columns: 45% 2fr;
   grid-template-rows: 1fr;
   gap: 0px 0px;
   grid-auto-flow: row;
   grid-template-areas: '. .';
+  color: #002d29;
 }
 
 figure {
   overflow: hidden;
-  max-width: 100%;
+  max-width: 350px;
+  justify-self: end;
+  align-self: center;
 }
 
-img {
+.drinkContent img {
   max-width: 100%;
+  border-radius: 6px;
+}
+
+.drinkInfo {
+  margin: 0 auto;
+  width: 75%;
+}
+
+.drinkContent section {
+  align-self: center;
 }

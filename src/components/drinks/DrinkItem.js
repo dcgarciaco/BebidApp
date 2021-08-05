@@ -28,25 +28,25 @@ export const DrinkItem = () => {
   };
 
   if (loading) {
-    return (
-      <article className='drinkContent'>{loading && <p>Loading...</p>}</article>
-    );
+    return <article className=''>{loading && <p>Loading...</p>}</article>;
   } else {
     return (
-      <article className='drinkContent'>
-        <figure>
-          <img src={drink[0].drinkImageURL} alt={drink[0].drinkName} />
-        </figure>
+      <article className='drinkInfo'>
+        <div className='drinkContent'>
+          <figure>
+            <img src={drink[0].drinkImageURL} alt={drink[0].drinkName} />
+          </figure>
 
-        <section>
-          <h2>{drink[0].drinkName}</h2>
-          <ul>{renderIngredientList(drink[0].drinkIngredients)}</ul>
-          <p>
-            <b>Glass</b> {drink[0].drinkGlass}
-          </p>
-          <h4>Instructions</h4>
-          <p>{drink[0].drinkInstructions}</p>
-        </section>
+          <section>
+            <h2>{drink[0].drinkName}</h2>
+            <ul>{renderIngredientList(drink[0].drinkIngredients)}</ul>
+            <p>
+              <b>Glass</b> {drink[0].drinkGlass}
+            </p>
+            <h3>Instructions</h3>
+            <p>{drink[0].drinkInstructions}</p>
+          </section>
+        </div>
       </article>
     );
   }
