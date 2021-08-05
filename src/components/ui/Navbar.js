@@ -1,7 +1,7 @@
 import React from 'react';
 import { NavLink } from 'react-router-dom';
 import './Navbar.css';
-import bebidAppLogo from '../../assets/img/logoBebidApp.png';
+import bebidAppLogo from './../../assets/img/logoBebidApp.png';
 
 export const Navbar = () => {
   return (
