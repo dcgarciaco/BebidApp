@@ -34,7 +34,7 @@ export const getDrinkInfo = async (drinkId) => {
       drinkName: drink.strDrink,
       drinkInstructions: drink.strInstructions,
       drinkImageURL: drink.strDrinkThumb,
-      drinkIngredient: drinkIngredients,
+      drinkIngredients: drinkIngredients,
       drinkGlass: drink.strGlass,
     };
   });

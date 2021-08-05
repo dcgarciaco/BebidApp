@@ -6,3 +6,12 @@
   grid-auto-flow: row;
   grid-template-areas: '. .';
 }
+
+figure {
+  overflow: hidden;
+  max-width: 100%;
+}
+
+img {
+  max-width: 100%;
+}

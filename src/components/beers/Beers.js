@@ -3,9 +3,9 @@ import { DrinkGrid } from '../drinks/DrinkGrid';
 
 export const Beers = () => {
   return (
-    <div>
+    <article>
       <h1>Beers</h1>
       <DrinkGrid category={'Beer'} />
-    </div>
+    </article>
   );
 };

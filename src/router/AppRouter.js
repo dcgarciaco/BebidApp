@@ -20,7 +20,7 @@ export const AppRouter = () => {
       <header>
         <Navbar />
       </header>
-      <article>
+      <main>
         <Switch>
           <Route exact path='/' component={Cocktails} />
           <Route exact path='/cocktails' component={Cocktails} />
@@ -30,7 +30,7 @@ export const AppRouter = () => {
 
           <Redirect to='/' />
         </Switch>
-      </article>
+      </main>
     </Router>
   );
 };

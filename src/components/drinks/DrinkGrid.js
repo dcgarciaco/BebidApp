@@ -5,7 +5,6 @@ import { DrinkGridItem } from './DrinkGridItem';
 
 export const DrinkGrid = ({ category }) => {
   const { data: drinks, loading } = useFetchDrinks(category);
-  console.log('Loading ', loading);
 
   return (
     <>
