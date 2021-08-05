@@ -1,6 +1,7 @@
-import React, { useState } from 'react';
-import { AddCategory } from './components/AddCategory';
-import { DrinkGrid } from './components/DrinkGrid';
+import React from 'react';
+// import React, { useState } from 'react';
+// import { AddCategory } from './components/AddCategory';
+// import { DrinkGrid } from './components/DrinkGrid';
 import { AppRouter } from './router/AppRouter';
 
 export const BebidApp = () => {
@@ -8,20 +9,20 @@ export const BebidApp = () => {
                         'Coffee_/_Tea', 'Homemade_Liqueur', 'Punch_/_Party_Drink', 'Beer', 'Soft_Drink_/_Soda',
                         'Other/Unknown' ]; 
      */
-
+  /*
   const [categories, setCategories] = useState([
     'Ordinary_Drink',
     'Cocktail',
-    /*'Milk_/_Float_/_Shake',
+    'Milk_/_Float_/_Shake',
     'Cocoa',
     'Shot',
     'Coffee_/_Tea',
     'Homemade_Liqueur',
-    'Punch_/_Party_Drink',  */
+    'Punch_/_Party_Drink',  
     'Beer',
     /*'Soft_Drink_/_Soda',
-    'Other/Unknown',*/
-  ]);
+    'Other/Unknown',
+  ]);*/
 
   /*
     const handleAdd = () =>{
@@ -35,7 +36,7 @@ export const BebidApp = () => {
     <>
       <AppRouter />
 
-      <h2>BebidApp</h2>
+      {/*       <h2>BebidApp</h2>
       <AddCategory setCategoriesFromBebidApp={setCategories} />
       <hr />
 
@@ -43,7 +44,7 @@ export const BebidApp = () => {
         {categories.map((category) => (
           <DrinkGrid key={category} category={category} />
         ))}
-      </ol>
+      </ol> */}
     </>
   );
 };
